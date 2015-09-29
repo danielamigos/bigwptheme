@@ -87,17 +87,37 @@ function bigtheme_nav()
 	);
 }
 
+function bootstrap_nav()
+{
+    wp_nav_menu( 
+    array(
+        'menu'              => 'header-menu',
+        'theme_location'    => 'header-menu',
+        'depth'             => 2,
+        'container'         => 'div',
+        'container_class'   => 'collapse navbar-collapse',
+        'container_id'      => 'bs-example-navbar-collapse-1',
+        'menu_class'        => 'nav navbar-nav',
+        'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+        'walker'            => new wp_bootstrap_navwalker()
+        )
+    );
+}
+
 // Load BIG Theme scripts (header.php)
 function bigtheme_header_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
-    	wp_register_script('conditionizr', get_template_directory_uri() . '/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
-        wp_enqueue_script('conditionizr'); // Enqueue it!
+    	//wp_register_script('conditionizr', get_template_directory_uri() . '/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
+        //wp_enqueue_script('conditionizr'); // Enqueue it!
 
-        wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
-        wp_enqueue_script('modernizr'); // Enqueue it!
+        //wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
+        //wp_enqueue_script('modernizr'); // Enqueue it!
 
+        wp_register_script('bootstrap', get_template_directory_uri() . '/js/lib/bootstrap.min.js', array('jquery'), '3.3.5'); // Custom scripts
+        wp_enqueue_script('bootstrap'); // Enqueue it!
+        
         wp_register_script('bigthemescripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('bigthemescripts'); // Enqueue it!
     }
@@ -115,8 +135,14 @@ function bigtheme_conditional_scripts()
 // Load BIG Theme styles
 function bigtheme_styles()
 {
-    wp_register_style('normalize', get_template_directory_uri() . '/normalize.css', array(), '1.0', 'all');
-    wp_enqueue_style('normalize'); // Enqueue it!
+    //wp_register_style('normalize', get_template_directory_uri() . '/normalize.css', array(), '1.0', 'all');
+    //wp_enqueue_style('normalize'); // Enqueue it!
+    
+    wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.5', 'all');
+    wp_enqueue_style('bootstrap'); // Enqueue it!
+    
+    //wp_register_style('font-awesome', 'http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css', array(), '3.2.1', 'all');
+    //wp_enqueue_style('font-awesome'); // Enqueue it!
 
     wp_register_style('bigtheme', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
     wp_enqueue_style('bigtheme'); // Enqueue it!
@@ -257,7 +283,11 @@ function big_theme_view_article($more)
 // Remove Admin bar
 function remove_admin_bar()
 {
-    return false;
+	if (!current_user_can('administrator') && !is_admin()) 
+	{
+		return false;	
+	}
+	return true;
 }
 
 // Remove 'text/css' from our enqueued stylesheet
@@ -449,4 +479,80 @@ function big_shortcode_demo_2($atts, $content = null) // Demo Heading H2 shortco
     return '<h2>' . $content . '</h2>';
 }
 
+function big_theme_customizer( $wp_customize ) {
+    $wp_customize->add_section( 'saintsandsinners_logo_section' , array(
+		'title'       => __( 'Logo', 'saintsandsinners' ),
+		'priority'    => 30,
+		'description' => 'Upload a logo to replace the default site name and description in the header',
+	) );
+	
+	$wp_customize->add_setting( 'saintsandsinners_logo' );
+	
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'saintsandsinners_logo', array(
+		'label'    => __( 'Logo', 'saintsandsinners' ),
+		'section'  => 'saintsandsinners_logo_section',
+		'settings' => 'saintsandsinners_logo',
+	) ) );
+    
+    
+    $wp_customize->add_section( 'saintsandsinners_logo2_section' , array(
+		'title'       => __( 'Logo 2', 'saintsandsinners' ),
+		'priority'    => 30,
+		'description' => 'Upload a second logo to be used and pages different from the front page',
+	) );
+	
+	$wp_customize->add_setting( 'saintsandsinners_logo2' );
+	
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'saintsandsinners_logo2', array(
+		'label'    => __( 'Logo', 'saintsandsinners' ),
+		'section'  => 'saintsandsinners_logo2_section',
+		'settings' => 'saintsandsinners_logo2',
+	) ) );
+
+}
+add_action('customize_register', 'big_theme_customizer');
+
+/*
+// 1. customize ACF path
+add_filter('acf/settings/path', 'my_acf_settings_path');
+function my_acf_settings_path( $path ) {
+    // update path
+    $path = get_stylesheet_directory() . '/acf/';
+    // return
+    return $path;   
+}
+// 2. customize ACF dir
+add_filter('acf/settings/dir', 'my_acf_settings_dir');
+function my_acf_settings_dir( $dir ) {
+    // update path
+    $dir = get_stylesheet_directory_uri() . '/acf/';
+    // return
+    return $dir;   
+}
+// 3. Hide ACF field group menu item
+add_filter('acf/settings/show_admin', '__return_false');
+// 4. Include ACF
+include_once( get_stylesheet_directory() . '/acf/acf.php' );
+*/
+
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Theme General Settings',
+		'menu_title'	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+	/*
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Front Page Slideshow',
+		'menu_title'	=> 'Front Page Slideshow',
+		'parent_slug'	=> 'theme-general-settings',
+	));	*/
+}
+
+
+require_once('wp_bootstrap_navwalker.php');
 ?>
