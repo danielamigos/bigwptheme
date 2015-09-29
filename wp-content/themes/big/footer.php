@@ -1,18 +1,20 @@
-			<!-- footer -->
-			<footer class="footer" role="contentinfo">
-
+			
+		</div>
+		<!-- /container -->
+		<!-- footer -->
+		<footer class="footer" role="contentinfo">	
+			<div class="container">
 				<!-- copyright -->
 				<p class="copyright">
 					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'bigtheme'); ?>
 					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//bigtheme.com" title="BIG Theme">BIG Theme</a>.
 				</p>
 				<!-- /copyright -->
+	
+			</div>
+		</footer>
+		<!-- /footer -->
 
-			</footer>
-			<!-- /footer -->
-
-		</div>
-		<!-- /container -->
 
 		<?php wp_footer(); ?>
 
