@@ -1,0 +1,99 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>BIGTheme</Name>
+    <ProjectGuid>{c1f660b4-22b5-49c0-8d9e-f2497c84b851}</ProjectGuid>
+    <RootNamespace>BIGTheme</RootNamespace>
+    <OutputType>Library</OutputType>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include=".vscode\tasks.json" />
+    <Compile Include="wp-content\themes\big\css\bootstrap-theme.css" />
+    <Compile Include="wp-content\themes\big\css\bootstrap-theme.css.map" />
+    <Compile Include="wp-content\themes\big\css\bootstrap-theme.min.css" />
+    <Compile Include="wp-content\themes\big\css\bootstrap.css" />
+    <Compile Include="wp-content\themes\big\css\bootstrap.css.map" />
+    <Compile Include="wp-content\themes\big\css\bootstrap.min.css" />
+    <Compile Include="wp-content\themes\big\fonts\glyphicons-halflings-regular.eot" />
+    <Compile Include="wp-content\themes\big\fonts\glyphicons-halflings-regular.svg" />
+    <Compile Include="wp-content\themes\big\fonts\glyphicons-halflings-regular.ttf" />
+    <Compile Include="wp-content\themes\big\fonts\glyphicons-halflings-regular.woff" />
+    <Compile Include="wp-content\themes\big\fonts\glyphicons-halflings-regular.woff2" />
+    <Compile Include="wp-content\themes\big\fonts\readme.txt" />
+    <Compile Include="wp-content\themes\big\img\icons\favicon.ico" />
+    <Compile Include="wp-content\themes\big\img\icons\touch.png" />
+    <Compile Include="wp-content\themes\big\img\gravatar.jpg" />
+    <Compile Include="wp-content\themes\big\img\logo.png" />
+    <Compile Include="wp-content\themes\big\img\logo.svg" />
+    <Compile Include="wp-content\themes\big\js\lib\bootstrap.js" />
+    <Compile Include="wp-content\themes\big\js\lib\bootstrap.min.js" />
+    <Compile Include="wp-content\themes\big\js\lib\conditionizr-4.3.0.min.js" />
+    <Compile Include="wp-content\themes\big\js\lib\modernizr-2.7.1.min.js" />
+    <Compile Include="wp-content\themes\big\js\scripts.js" />
+    <Compile Include="wp-content\themes\big\languages\de_DE.mo" />
+    <Compile Include="wp-content\themes\big\languages\de_DE.po" />
+    <Compile Include="wp-content\themes\big\languages\es_CL.mo" />
+    <Compile Include="wp-content\themes\big\languages\es_CL.po" />
+    <Compile Include="wp-content\themes\big\languages\es_ES.mo" />
+    <Compile Include="wp-content\themes\big\languages\es_ES.po" />
+    <Compile Include="wp-content\themes\big\languages\fr_FR.mo" />
+    <Compile Include="wp-content\themes\big\languages\fr_FR.po" />
+    <Compile Include="wp-content\themes\big\languages\HTML5Blank.pot" />
+    <Compile Include="wp-content\themes\big\languages\hu_HU.mo" />
+    <Compile Include="wp-content\themes\big\languages\hu_HU.po" />
+    <Compile Include="wp-content\themes\big\languages\it_IT.mo" />
+    <Compile Include="wp-content\themes\big\languages\it_IT.po" />
+    <Compile Include="wp-content\themes\big\languages\nl_NL.mo" />
+    <Compile Include="wp-content\themes\big\languages\nl_NL.po" />
+    <Compile Include="wp-content\themes\big\languages\pt_BR.mo" />
+    <Compile Include="wp-content\themes\big\languages\pt_BR.po" />
+    <Compile Include="wp-content\themes\big\languages\ro_RO.mo" />
+    <Compile Include="wp-content\themes\big\languages\ro_RO.po" />
+    <Compile Include="wp-content\themes\big\.gitignore" />
+    <Compile Include="wp-content\themes\big\404.php" />
+    <Compile Include="wp-content\themes\big\archive.php" />
+    <Compile Include="wp-content\themes\big\author.php" />
+    <Compile Include="wp-content\themes\big\category.php" />
+    <Compile Include="wp-content\themes\big\comments.php" />
+    <Compile Include="wp-content\themes\big\footer.php" />
+    <Compile Include="wp-content\themes\big\functions.php" />
+    <Compile Include="wp-content\themes\big\header.php" />
+    <Compile Include="wp-content\themes\big\index.php" />
+    <Compile Include="wp-content\themes\big\loop.php" />
+    <Compile Include="wp-content\themes\big\normalize.css" />
+    <Compile Include="wp-content\themes\big\normalize.min.css" />
+    <Compile Include="wp-content\themes\big\page.php" />
+    <Compile Include="wp-content\themes\big\pagination.php" />
+    <Compile Include="wp-content\themes\big\screenshot.png" />
+    <Compile Include="wp-content\themes\big\search.php" />
+    <Compile Include="wp-content\themes\big\searchform.php" />
+    <Compile Include="wp-content\themes\big\sidebar.php" />
+    <Compile Include="wp-content\themes\big\single.php" />
+    <Compile Include="wp-content\themes\big\style.css" />
+    <Compile Include="wp-content\themes\big\tag.php" />
+    <Compile Include="wp-content\themes\big\template-demo.php" />
+    <Compile Include="wp-content\themes\big\wp_bootstrap_navwalker.php" />
+    <Compile Include="wp-content\index.php" />
+    <Compile Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".vscode" />
+    <Folder Include="wp-content\themes\big\css" />
+    <Folder Include="wp-content\themes\big\fonts" />
+    <Folder Include="wp-content\themes\big\img\icons" />
+    <Folder Include="wp-content\themes\big\img" />
+    <Folder Include="wp-content\themes\big\js\lib" />
+    <Folder Include="wp-content\themes\big\js" />
+    <Folder Include="wp-content\themes\big\languages" />
+    <Folder Include="wp-content\themes\big" />
+    <Folder Include="wp-content\themes" />
+    <Folder Include="wp-content" />
+  </ItemGroup>
+</Project>
