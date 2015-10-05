@@ -81,22 +81,22 @@ input:focus {
 }
 /* header */
 .header {
-
+  position: relative;
 }
 /* logo */
 .logo {
-
+  position: relative;
 }
 .logo-img {
-
+  position: relative;
 }
 /* nav */
 .nav {
-
+  position: relative;
 }
 /* sidebar */
 .sidebar {
-
+  position: relative;
 }
 /* footer */
 .footer {
@@ -168,23 +168,28 @@ input:focus {
 
 .grey-title-background{
     background-color: #C6C6C6; 
+}
+.grey-title-background-with-link{
     background-image: url('img/OrangeTriangle.png');
     background-repeat: no-repeat;
     background-position: -14px center; /*-4px*/
 	transition: all 0.3s ease 0s;
 }
 
-.grey-title-background:hover{
+.grey-title-background-with-link:hover{
     background-position: -4px center; /*-4px*/
 }
+
 .orange-title-background{
     background-color: #E68B00;
+}
+.orange-title-background-with-link{
     background-image: url('img/GreyTriangle.png');
     background-repeat: no-repeat;
     background-position: -14px center; /*-4px*/
 	transition: all 0.3s ease 0s;
 }
-.orange-title-background:hover{
+.orange-title-background-with-link:hover{
     background-position: -4px center; /*-4px*/
 }
 /*------------------------------------*\
@@ -470,10 +475,10 @@ a img.aligncenter {
 	padding:0 4px 5px;
 }
 .sticky {
-
+  position: relative;
 }
 .bypostauthor {
-
+  position: relative;
 }
 
 /*------------------------------------*\

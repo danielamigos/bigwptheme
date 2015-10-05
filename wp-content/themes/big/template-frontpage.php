@@ -55,16 +55,7 @@
 
         // no layouts found
 
-    endif;
-            ?>
-            <div class="row">
-                <div class="col-sm-6">
-                    <h2 class="two-column-title grey-title-background">CLICK HERE FOR AN INSTANT HOME OR AUTO QUOTE</h2>
-                </div>
-                <div class="col-sm-6">
-                    <h2 class="two-column-title orange-title-background">WHO IS BREINHOLT INSURANCE GROUP?</h2>
-                </div>
-            </div>
+    endif;?>
 
 <?php get_sidebar(); ?>
 
