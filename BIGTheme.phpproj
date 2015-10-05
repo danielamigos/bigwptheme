@@ -108,6 +108,7 @@
     <Folder Include="wp-content" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="wp-content\themes\big\acf-export.json" />
     <Content Include="wp-content\themes\big\css\gray.css" />
     <Content Include="wp-content\themes\big\css\gray.min.css" />
     <Content Include="wp-content\themes\big\fonts\DIN-Bold_gdi.eot" />
