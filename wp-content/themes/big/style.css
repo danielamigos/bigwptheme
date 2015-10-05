@@ -109,9 +109,87 @@ input:focus {
 }
 
 /*------------------------------------*\
-    PAGES
+    FRONT PAGE
 \*------------------------------------*/
+.call-to-action-menu-title{
+    text-transform:uppercase;
+    color:#ffffff;
+    background-color:#C6C6C6;
+    /*font-size:70px;*/
+    font-family:'TradeGothicLTStd-Cn18';
+    padding: 10px;
+    text-align:center;
+}
 
+.call-to-action-menu{
+    min-height:270px; 
+    height:270px; 
+    display: -webkit-flex; 
+    -webkit-align-items: center; 
+    -webkit-justify-content: center; 
+    -ms-flex-align:center; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.call-to-action-menu-text{
+    color: #E68B00;
+    font-family:'TradeGothicLTStd-BdCn20';
+    font-size:34px;
+    text-transform:uppercase;
+    text-align:center;
+}
+
+.call-to-action-menu-description{
+    color: #706F6F;
+    font-family:'DIN-Regular';
+    font-size:12px;
+    text-align:center;
+}
+
+.call-to-action-menu-link{
+    text-align:center;
+}
+
+.call-to-action-menu-link a{
+    color: #F39200;
+    font-family:'DIN-Bold';
+    text-transform:uppercase;
+    font-size:10px;
+}
+
+.two-column-title{
+    color: #ffffff;
+    font-family:'TradeGothicLTStd-BdCn20';
+    font-size: 26px;
+    padding: 5px 5px 5px 20px;
+}
+
+.grey-title-background{
+    background-color: #C6C6C6; 
+    background-image: url('img/OrangeTriangle.png');
+    background-repeat: no-repeat;
+    background-position: -14px center; /*-4px*/
+	transition: all 0.3s ease 0s;
+}
+
+.grey-title-background:hover{
+    background-position: -4px center; /*-4px*/
+}
+.orange-title-background{
+    background-color: #E68B00;
+    background-image: url('img/GreyTriangle.png');
+    background-repeat: no-repeat;
+    background-position: -14px center; /*-4px*/
+	transition: all 0.3s ease 0s;
+}
+.orange-title-background:hover{
+    background-position: -4px center; /*-4px*/
+}
+/*------------------------------------*\
+    PAGE
+\*------------------------------------*/
 
 
 /*------------------------------------*\
@@ -134,6 +212,148 @@ input:focus {
     font-weight:normal;
     font-style:normal;
 }
+
+@font-face {
+	font-family:'TradeGothicLTStd-Bd2';
+	src: url('fonts/TradeGothicLTStd-Bd2_gdi.eot');
+	src: url('fonts/TradeGothicLTStd-Bd2_gdi.eot?#iefix') format('embedded-opentype'),
+		url('fonts/TradeGothicLTStd-Bd2_gdi.woff') format('woff'),
+		url('fonts/TradeGothicLTStd-Bd2_gdi.ttf') format('truetype'),
+		url('fonts/TradeGothicLTStd-Bd2_gdi.otf') format('opentype'),
+		url('fonts/TradeGothicLTStd-Bd2_gdi.svg#TradeGothicLTStd-Bd2') format('svg');
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-25CA;
+}
+
+@font-face {
+	font-family:'TradeGothicLTStd-Cn18';
+	src: url('fonts/TradeGothicLTStd-Cn18_gdi.eot');
+	src: url('fonts/TradeGothicLTStd-Cn18_gdi.eot?#iefix') format('embedded-opentype'),
+		url('fonts/TradeGothicLTStd-Cn18_gdi.woff') format('woff'),
+		url('fonts/TradeGothicLTStd-Cn18_gdi.ttf') format('truetype'),
+		url('fonts/TradeGothicLTStd-Cn18_gdi.otf') format('opentype'),
+		url('fonts/TradeGothicLTStd-Cn18_gdi.svg#TradeGothicLTStd-Cn18') format('svg');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: condensed;
+	unicode-range: U+0020-25CA;
+}
+
+@font-face {
+	font-family:'TradeGothicLTStd-BdCn20';
+	src: url('fonts/TradeGothicLTStd-BdCn20_gdi.eot');
+	src: url('fonts/TradeGothicLTStd-BdCn20_gdi.eot?#iefix') format('embedded-opentype'),
+		url('fonts/TradeGothicLTStd-BdCn20_gdi.woff') format('woff'),
+		url('fonts/TradeGothicLTStd-BdCn20_gdi.ttf') format('truetype'),
+		url('fonts/TradeGothicLTStd-BdCn20_gdi.otf') format('opentype'),
+		url('fonts/TradeGothicLTStd-BdCn20_gdi.svg#TradeGothicLTStd-BdCn20') format('svg');
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: condensed;
+	unicode-range: U+0020-25CA;
+}
+
+@font-face {
+	font-family:'TradeGothicLTStd-Light';
+	src: url('fonts/TradeGothicLTStd-Light_gdi.eot');
+	src: url('fonts/TradeGothicLTStd-Light_gdi.eot?#iefix') format('embedded-opentype'),
+		url('fonts/TradeGothicLTStd-Light_gdi.woff') format('woff'),
+		url('fonts/TradeGothicLTStd-Light_gdi.ttf') format('truetype'),
+		url('fonts/TradeGothicLTStd-Light_gdi.otf') format('opentype'),
+		url('fonts/TradeGothicLTStd-Light_gdi.svg#TradeGothicLTStd-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-25CA;
+}
+
+@font-face {
+	font-family:'DIN-Regular';
+	src: url('fonts/DIN-Regular_gdi.eot');
+	src: url('fonts/DIN-Regular_gdi.eot?#iefix') format('embedded-opentype'),
+		url('fonts/DIN-Regular_gdi.woff') format('woff'),
+		url('fonts/DIN-Regular_gdi.ttf') format('truetype'),
+		url('fonts/DIN-Regular_gdi.otf') format('opentype'),
+		url('fonts/DIN-Regular_gdi.svg#DIN-Regular') format('svg');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-25CA;
+}
+
+@font-face {
+	font-family:'DIN-Medium';
+	src: url('fonts/DIN-Medium_gdi.eot');
+	src: url('fonts/DIN-Medium_gdi.eot?#iefix') format('embedded-opentype'),
+		url('fonts/DIN-Medium_gdi.woff') format('woff'),
+		url('fonts/DIN-Medium_gdi.ttf') format('truetype'),
+		url('fonts/DIN-Medium_gdi.otf') format('opentype'),
+		url('fonts/DIN-Medium_gdi.svg#DIN-Medium') format('svg');
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-25CA;
+}
+
+@font-face {
+	font-family:'DIN-Light';
+	src: url('fonts/DIN-Light_gdi.eot');
+	src: url('fonts/DIN-Light_gdi.eot?#iefix') format('embedded-opentype'),
+		url('fonts/DIN-Light_gdi.woff') format('woff'),
+		url('fonts/DIN-Light_gdi.ttf') format('truetype'),
+		url('fonts/DIN-Light_gdi.otf') format('opentype'),
+		url('fonts/DIN-Light_gdi.svg#DIN-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-25CA;
+}
+
+@font-face {
+	font-family:'DIN-Bold';
+	src: url('fonts/DIN-Bold_gdi.eot');
+	src: url('fonts/DIN-Bold_gdi.eot?#iefix') format('embedded-opentype'),
+		url('fonts/DIN-Bold_gdi.woff') format('woff'),
+		url('fonts/DIN-Bold_gdi.ttf') format('truetype'),
+		url('fonts/DIN-Bold_gdi.otf') format('opentype'),
+		url('fonts/DIN-Bold_gdi.svg#DIN-Bold') format('svg');
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-25CA;
+}
+
+@font-face {
+	font-family:'GillSans-Regular';
+	src: url('GillSans_gdi.eot');
+	src: url('GillSans_gdi.eot?#iefix') format('embedded-opentype'),
+		url('GillSans_gdi.woff') format('woff'),
+		url('GillSans_gdi.ttf') format('truetype'),
+		url('GillSans_gdi.otf') format('opentype'),
+		url('GillSans_gdi.svg#GillSans-Regular') format('svg');
+	font-weight: 5;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-2666;
+}
+
+@font-face {
+	font-family:'GillSans-Light';
+	src: url('GillSans-Light_gdi.eot');
+	src: url('GillSans-Light_gdi.eot?#iefix') format('embedded-opentype'),
+		url('GillSans-Light_gdi.woff') format('woff'),
+		url('GillSans-Light_gdi.ttf') format('truetype'),
+		url('GillSans-Light_gdi.otf') format('opentype'),
+		url('GillSans-Light_gdi.svg#GillSans-Light') format('svg');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-25CA;
+}
+
+
 
 /*------------------------------------*\
     RESPONSIVE

@@ -1,3 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -6,6 +7,15 @@
     <RootNamespace>BIGTheme</RootNamespace>
     <OutputType>Library</OutputType>
     <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+    <Server>Custom</Server>
+    <PublishEvent>BeforeRun</PublishEvent>
+    <PHPDevAutoPort>True</PHPDevAutoPort>
+    <PHPDevPort>23965</PHPDevPort>
+    <PHPDevHostName>localhost</PHPDevHostName>
+    <IISProjectUrl>http://localhost:23965/</IISProjectUrl>
+    <CustomServerUrl>http://localhost/big/</CustomServerUrl>
+    <PublishBeforeDebugProfile>Wordpress</PublishBeforeDebugProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <IncludeDebugInformation>true</IncludeDebugInformation>
@@ -79,6 +89,7 @@
     <Compile Include="wp-content\themes\big\style.css" />
     <Compile Include="wp-content\themes\big\tag.php" />
     <Compile Include="wp-content\themes\big\template-demo.php" />
+    <Compile Include="wp-content\themes\big\template-frontpage.php" />
     <Compile Include="wp-content\themes\big\wp_bootstrap_navwalker.php" />
     <Compile Include="wp-content\index.php" />
     <Compile Include="README.md" />
@@ -95,5 +106,64 @@
     <Folder Include="wp-content\themes\big" />
     <Folder Include="wp-content\themes" />
     <Folder Include="wp-content" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="wp-content\themes\big\css\gray.css" />
+    <Content Include="wp-content\themes\big\css\gray.min.css" />
+    <Content Include="wp-content\themes\big\fonts\DIN-Bold_gdi.eot" />
+    <Content Include="wp-content\themes\big\fonts\DIN-Bold_gdi.otf" />
+    <Content Include="wp-content\themes\big\fonts\DIN-Bold_gdi.svg" />
+    <Content Include="wp-content\themes\big\fonts\DIN-Bold_gdi.ttf" />
+    <Content Include="wp-content\themes\big\fonts\DIN-Bold_gdi.woff" />
+    <Content Include="wp-content\themes\big\fonts\DIN-Light_gdi.eot" />
+    <Content Include="wp-content\themes\big\fonts\DIN-Light_gdi.otf" />
+    <Content Include="wp-content\themes\big\fonts\DIN-Light_gdi.svg" />
+    <Content Include="wp-content\themes\big\fonts\DIN-Light_gdi.ttf" />
+    <Content Include="wp-content\themes\big\fonts\DIN-Light_gdi.woff" />
+    <Content Include="wp-content\themes\big\fonts\DIN-Medium_gdi.eot" />
+    <Content Include="wp-content\themes\big\fonts\DIN-Medium_gdi.otf" />
+    <Content Include="wp-content\themes\big\fonts\DIN-Medium_gdi.svg" />
+    <Content Include="wp-content\themes\big\fonts\DIN-Medium_gdi.ttf" />
+    <Content Include="wp-content\themes\big\fonts\DIN-Medium_gdi.woff" />
+    <Content Include="wp-content\themes\big\fonts\DIN-Regular_gdi.eot" />
+    <Content Include="wp-content\themes\big\fonts\DIN-Regular_gdi.otf" />
+    <Content Include="wp-content\themes\big\fonts\DIN-Regular_gdi.svg" />
+    <Content Include="wp-content\themes\big\fonts\DIN-Regular_gdi.ttf" />
+    <Content Include="wp-content\themes\big\fonts\DIN-Regular_gdi.woff" />
+    <Content Include="wp-content\themes\big\fonts\GillSans-Light_gdi.eot" />
+    <Content Include="wp-content\themes\big\fonts\GillSans-Light_gdi.otf" />
+    <Content Include="wp-content\themes\big\fonts\GillSans-Light_gdi.svg" />
+    <Content Include="wp-content\themes\big\fonts\GillSans-Light_gdi.ttf" />
+    <Content Include="wp-content\themes\big\fonts\GillSans-Light_gdi.woff" />
+    <Content Include="wp-content\themes\big\fonts\GillSans_gdi.eot" />
+    <Content Include="wp-content\themes\big\fonts\GillSans_gdi.otf" />
+    <Content Include="wp-content\themes\big\fonts\GillSans_gdi.svg" />
+    <Content Include="wp-content\themes\big\fonts\GillSans_gdi.ttf" />
+    <Content Include="wp-content\themes\big\fonts\GillSans_gdi.woff" />
+    <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-Bd2_gdi.eot" />
+    <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-Bd2_gdi.otf" />
+    <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-Bd2_gdi.svg" />
+    <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-Bd2_gdi.ttf" />
+    <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-Bd2_gdi.woff" />
+    <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-BdCn20_gdi.eot" />
+    <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-BdCn20_gdi.otf" />
+    <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-BdCn20_gdi.svg" />
+    <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-BdCn20_gdi.ttf" />
+    <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-BdCn20_gdi.woff" />
+    <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-Cn18_gdi.eot" />
+    <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-Cn18_gdi.otf" />
+    <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-Cn18_gdi.svg" />
+    <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-Cn18_gdi.ttf" />
+    <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-Cn18_gdi.woff" />
+    <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-Light_gdi.eot" />
+    <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-Light_gdi.otf" />
+    <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-Light_gdi.svg" />
+    <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-Light_gdi.ttf" />
+    <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-Light_gdi.woff" />
+    <Content Include="wp-content\themes\big\img\GreyTriangle.png" />
+    <Content Include="wp-content\themes\big\img\jumbotron.jpg" />
+    <Content Include="wp-content\themes\big\img\OrangeTriangle.png" />
+    <Content Include="wp-content\themes\big\js\lib\jquery.gray.js" />
+    <Content Include="wp-content\themes\big\js\lib\jquery.gray.min.js" />
   </ItemGroup>
 </Project>
