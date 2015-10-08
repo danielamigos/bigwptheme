@@ -166,30 +166,30 @@ input:focus {
     padding: 5px 5px 5px 20px;
 }
 
-.grey-title-background{
+.gray-title-background{
     background-color: #C6C6C6; 
 }
-.grey-title-background-with-link{
+.gray-title-background.with-link{
     background-image: url('img/OrangeTriangle.png');
     background-repeat: no-repeat;
     background-position: -14px center; /*-4px*/
 	transition: all 0.3s ease 0s;
 }
 
-.grey-title-background-with-link:hover{
+.gray-title-background.with-link:hover{
     background-position: -4px center; /*-4px*/
 }
 
 .orange-title-background{
     background-color: #E68B00;
 }
-.orange-title-background-with-link{
+.orange-title-background.with-link{
     background-image: url('img/GreyTriangle.png');
     background-repeat: no-repeat;
     background-position: -14px center; /*-4px*/
 	transition: all 0.3s ease 0s;
 }
-.orange-title-background-with-link:hover{
+.orange-title-background.with-link:hover{
     background-position: -4px center; /*-4px*/
 }
 /*------------------------------------*\

@@ -39,7 +39,14 @@
 
             <div class="row">
                 <div class="col-sm-6">
-                    <h2 class="two-column-title grey-title-background">CLICK HERE FOR AN INSTANT HOME OR AUTO QUOTE</h2>
+                    
+                    <?PHP if( have_rows('left_column_elements') ): while ( have_rows('left_column_elements') ) : the_row(); ?>
+                    <?PHP if( get_row_layout() == 'title' ): 
+                              $background_class=(get_sub_field('background_color')=='Gray')?'gray-title-background':'orange-title-background'; 
+                              if(get_sub_field('use_link')){ $background_class .= ' with-link';}?>
+                    <h2 class="two-column-title <?PHP echo $background_class; ?>"><?PHP the_sub_field('title');?></h2>
+                    <?PHP endif; ?>                        
+                    <?PHP endwhile; endif; ?>
                 </div>
                 <div class="col-sm-6">
                     <h2 class="two-column-title orange-title-background">WHO IS BREINHOLT INSURANCE GROUP?</h2>
