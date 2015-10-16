@@ -144,6 +144,9 @@ function bigtheme_styles()
     wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.5', 'all');
     wp_enqueue_style('bootstrap'); // Enqueue it!
     
+    wp_register_style('gray', get_template_directory_uri() . '/css/gray.min.css', array(), '1.0', 'all');
+    wp_enqueue_style('gray'); // Enqueue it!
+    
     //wp_register_style('font-awesome', 'http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css', array(), '3.2.1', 'all');
     //wp_enqueue_style('font-awesome'); // Enqueue it!
 
@@ -483,34 +486,34 @@ function big_shortcode_demo_2($atts, $content = null) // Demo Heading H2 shortco
 }
 
 function big_theme_customizer( $wp_customize ) {
-    $wp_customize->add_section( 'saintsandsinners_logo_section' , array(
-		'title'       => __( 'Logo', 'saintsandsinners' ),
+    $wp_customize->add_section( 'big_logo_section' , array(
+		'title'       => __( 'Logo', 'big' ),
 		'priority'    => 30,
-		'description' => 'Upload a logo to replace the default site name and description in the header',
+		'description' => 'Upload a logo for the page headers.',
 	) );
 	
-	$wp_customize->add_setting( 'saintsandsinners_logo' );
+	$wp_customize->add_setting( 'big_logo' );
 	
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'saintsandsinners_logo', array(
-		'label'    => __( 'Logo', 'saintsandsinners' ),
-		'section'  => 'saintsandsinners_logo_section',
-		'settings' => 'saintsandsinners_logo',
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'big_logo', array(
+		'label'    => __( 'Logo', 'big' ),
+		'section'  => 'big_logo_section',
+		'settings' => 'big_logo',
 	) ) );
     
     
-    $wp_customize->add_section( 'saintsandsinners_logo2_section' , array(
-		'title'       => __( 'Logo 2', 'saintsandsinners' ),
-		'priority'    => 30,
-		'description' => 'Upload a second logo to be used and pages different from the front page',
-	) );
+    //$wp_customize->add_section( 'saintsandsinners_logo2_section' , array(
+    //    'title'       => __( 'Logo 2', 'saintsandsinners' ),
+    //    'priority'    => 30,
+    //    'description' => 'Upload a second logo to be used and pages different from the front page',
+    //) );
 	
-	$wp_customize->add_setting( 'saintsandsinners_logo2' );
+    //$wp_customize->add_setting( 'saintsandsinners_logo2' );
 	
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'saintsandsinners_logo2', array(
-		'label'    => __( 'Logo', 'saintsandsinners' ),
-		'section'  => 'saintsandsinners_logo2_section',
-		'settings' => 'saintsandsinners_logo2',
-	) ) );
+    //$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'saintsandsinners_logo2', array(
+    //    'label'    => __( 'Logo', 'saintsandsinners' ),
+    //    'section'  => 'saintsandsinners_logo2_section',
+    //    'settings' => 'saintsandsinners_logo2',
+    //) ) );
 
 }
 add_action('customize_register', 'big_theme_customizer');
@@ -558,4 +561,7 @@ if( function_exists('acf_add_options_page') ) {
 
 
 require_once('wp_bootstrap_navwalker.php');
+
+
+
 ?>

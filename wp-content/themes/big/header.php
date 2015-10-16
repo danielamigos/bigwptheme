@@ -24,8 +24,8 @@
         </script>
 
 	</head>
-	<body <?php body_class(); ?>  style="margin-bottom: 60px;">
-
+	<body <?php body_class(); ?>  >
+    <div id="wrap" style="margin-bottom: -<?PHP the_field('footer_height','option'); ?>px;padding-bottom: <?PHP the_field('footer_height','option'); ?>px;">
     <nav class="navbar navbar-inverse navbar-fixed-top" style="<?php if ( is_admin_bar_showing() ) echo 'top:32px;';?>">
       <div class="container">
         <div class="navbar-header">

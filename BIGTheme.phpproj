@@ -151,6 +151,11 @@
     <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-BdCn20_gdi.svg" />
     <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-BdCn20_gdi.ttf" />
     <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-BdCn20_gdi.woff" />
+    <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-Bold_gdi.eot" />
+    <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-Bold_gdi.otf" />
+    <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-Bold_gdi.svg" />
+    <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-Bold_gdi.ttf" />
+    <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-Bold_gdi.woff" />
     <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-Cn18_gdi.eot" />
     <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-Cn18_gdi.otf" />
     <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-Cn18_gdi.svg" />
@@ -161,9 +166,17 @@
     <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-Light_gdi.svg" />
     <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-Light_gdi.ttf" />
     <Content Include="wp-content\themes\big\fonts\TradeGothicLTStd-Light_gdi.woff" />
+    <Content Include="wp-content\themes\big\img\Facebook.png" />
     <Content Include="wp-content\themes\big\img\GreyTriangle.png" />
     <Content Include="wp-content\themes\big\img\jumbotron.jpg" />
+    <Content Include="wp-content\themes\big\img\LinkedIn.png" />
+    <Content Include="wp-content\themes\big\img\menu-email.png" />
+    <Content Include="wp-content\themes\big\img\menu-facebook.png" />
+    <Content Include="wp-content\themes\big\img\menu-linkedin.png" />
+    <Content Include="wp-content\themes\big\img\OrangeTriangle-Up.png" />
     <Content Include="wp-content\themes\big\img\OrangeTriangle.png" />
+    <Content Include="wp-content\themes\big\img\small-elephant.png" />
+    <Content Include="wp-content\themes\big\img\Twitter.png" />
     <Content Include="wp-content\themes\big\js\lib\jquery.gray.js" />
     <Content Include="wp-content\themes\big\js\lib\jquery.gray.min.js" />
   </ItemGroup>

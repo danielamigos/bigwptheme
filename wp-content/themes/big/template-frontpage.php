@@ -23,7 +23,7 @@
                 <?PHP $menu_items = get_sub_field('menu_items');
                       $numberOfMenuItem = count($menu_items);
                       foreach($menu_items as $index => $value):?>
-                <div class="col-sm-2 call-to-action-menu-item" style="<?PHP if($numberOfMenuItem < 6) echo 'width:19%;';?> vertical-align:middle;">
+                <div class="col-sm-2 call-to-action-menu-item" style="vertical-align:middle;">
                     <div><img class="center-block" src="<?PHP echo $value['image']['url'];?>" /></div>
                     <div class="call-to-action-menu-text"><?PHP echo $value['text'];?></div>
                     <div class="call-to-action-hidden-desription" style="display:none;">
@@ -38,18 +38,59 @@
         <?php  elseif(get_row_layout() == 'two_column_section'): ?>
 
             <div class="row">
-                <div class="col-sm-6">
-                    
+                <div class="col-sm-6">                    
                     <?PHP if( have_rows('left_column_elements') ): while ( have_rows('left_column_elements') ) : the_row(); ?>
-                    <?PHP if( get_row_layout() == 'title' ): 
-                              $background_class=(get_sub_field('background_color')=='Gray')?'gray-title-background':'orange-title-background'; 
-                              if(get_sub_field('use_link')){ $background_class .= ' with-link';}?>
-                    <h2 class="two-column-title <?PHP echo $background_class; ?>"><?PHP the_sub_field('title');?></h2>
-                    <?PHP endif; ?>                        
-                    <?PHP endwhile; endif; ?>
+                        <?PHP if( get_row_layout() == 'title' ): 
+                                $background_class=(get_sub_field('background_color')=='Gray')?'gray-title-background':'orange-title-background'; 
+                                $link_url = null;
+                                $link_target = null;
+                                if(get_sub_field('use_link')): $background_class .= ' with-link'; $link_url = get_sub_field('link'); $link_target = (get_sub_field('link_target')=='Same Page')?'_self':'_blank'; ?>
+                                <a href="<?PHP echo $link_url; ?>" target="<?PHP echo $link_target; ?>" style="text-decoration:none;"><h2 class="two-column-title <?PHP echo $background_class; ?>"><?PHP the_sub_field('title');?></h2></a>
+                            <?PHP else: ?>
+                                <h2 class="two-column-title <?PHP echo $background_class; ?>"><?PHP the_sub_field('title');?></h2>
+                            <?PHP endif; ?>
+                        <?PHP elseif(get_row_layout() == 'image'): 
+                                $link_url = null;
+                                $link_target = null;
+                                if(get_sub_field('use_link')): $link_url = get_sub_field('link'); $link_target = (get_sub_field('link_target')=='Same Page')?'_self':'_blank';?>
+                                <a href="<?PHP echo $link_url; ?>" target="<?PHP echo $link_target; ?>" style="text-decoration:none;"><img src="<?PHP echo get_sub_field('image')['url'];?>" class="grayscale grayscale-fade" /></a>
+                            <?PHP else:?>
+                                <img src="<?PHP echo get_sub_field('image')['url'];?>" class="grayscale grayscale-fade" />
+                            <?PHP endif;?>                    
+                        <?PHP elseif(get_row_layout() == 'text'): ?>
+                            <?PHP the_sub_field('content');?>
+                        <?PHP endif; ?>                    
+                    <?PHP endwhile;
+                          endif; ?>
                 </div>
                 <div class="col-sm-6">
-                    <h2 class="two-column-title orange-title-background">WHO IS BREINHOLT INSURANCE GROUP?</h2>
+                    <?PHP if( have_rows('right_column_elements') ):
+                              while ( have_rows('right_column_elements') ) :
+                                  the_row(); ?>
+                        <?PHP if( get_row_layout() == 'title' ): 
+                                  $background_class=(get_sub_field('background_color')=='Gray')?'gray-title-background':'orange-title-background'; 
+                                  $link_url = null;
+                                  $link_target = null;
+                                  if(get_sub_field('use_link')):
+                                      $background_class .= ' with-link'; $link_url = get_sub_field('link'); $link_target = (get_sub_field('link_target')=='Same Page')?'_self':'_blank'; ?>
+                                <a href="<?PHP echo $link_url; ?>" target="<?PHP echo $link_target; ?>" style="text-decoration:none;"><h2 class="two-column-title <?PHP echo $background_class; ?>"><?PHP the_sub_field('title');?></h2></a>
+                            <?PHP else: ?>
+                                <h2 class="two-column-title <?PHP echo $background_class; ?>"><?PHP the_sub_field('title');?></h2>
+                            <?PHP endif; ?>
+                        <?PHP elseif(get_row_layout() == 'image'): 
+                                  $link_url = null;
+                                  $link_target = null;
+                                  if(get_sub_field('use_link')):
+                                      $link_url = get_sub_field('link'); $link_target = (get_sub_field('link_target')=='Same Page')?'_self':'_blank';?>
+                                <a href="<?PHP echo $link_url; ?>" target="<?PHP echo $link_target; ?>" style="text-decoration:none;"><img src="<?PHP echo get_sub_field('image')['url'];?>" class="grayscale grayscale-fade" /></a>
+                            <?PHP else:?>
+                                <img src="<?PHP echo get_sub_field('image')['url'];?>" class="grayscale grayscale-fade" />
+                            <?PHP endif;?>                    
+                        <?PHP elseif(get_row_layout() == 'text'): ?>
+                            <?PHP the_sub_field('content');?>
+                        <?PHP endif; ?>                    
+                    <?PHP endwhile;
+                          endif; ?>
                 </div>
                 <!--content: trade gothic light 23-->
             </div>
@@ -58,12 +99,14 @@
 
         endwhile;
 
-    else :
+    else : ?>
 
-        // no layouts found
+        <div>No content</div>
 
-    endif;?>
+   <?PHP endif;?>
 
 <?php get_sidebar(); ?>
+
+<div class="frontpage-footer"><span class="big-text">Big</span> on details <img src="<?php echo get_template_directory_uri(); ?>/img/small-elephant.png" /> <span class="big-text">Big</span> on Service</div>
 
 <?php get_footer(); ?>
