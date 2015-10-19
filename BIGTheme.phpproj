@@ -89,6 +89,7 @@
     <Compile Include="wp-content\themes\big\style.css" />
     <Compile Include="wp-content\themes\big\tag.php" />
     <Compile Include="wp-content\themes\big\template-demo.php" />
+    <Compile Include="wp-content\themes\big\template-one-column.php" />
     <Compile Include="wp-content\themes\big\template-frontpage.php" />
     <Compile Include="wp-content\themes\big\wp_bootstrap_navwalker.php" />
     <Compile Include="wp-content\index.php" />

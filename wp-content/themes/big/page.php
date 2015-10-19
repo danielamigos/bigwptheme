@@ -13,8 +13,7 @@
 	<main role="main">
 		<!-- section -->
 		<section>
-			<h1 class="page-title"><?php the_title();
-?></h1>
+			<h1 class="page-title"><?php the_title();?></h1>
             <?PHP if (function_exists(the_subtitle)): ?>
             <h2 class="page-subtitle"><?php the_subtitle(); ?></h2>
             <?PHP endif;?>

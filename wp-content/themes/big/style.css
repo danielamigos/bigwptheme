@@ -141,6 +141,10 @@ li.facebook-menu-item {
     width: 50px;
     display:inline-block;
 }
+
+.dropdown-menu > li > a {
+    font-size:22px;
+}
 /*
 
 .navbar-inverse .navbar-nav>li>a{

@@ -1,7 +1,8 @@
 			
 		</div>
 		<!-- /container -->
-        </div><!--end wrap-->
+        </div><!--
+                  end wrap-->
 		<!-- footer -->
 		<footer class="footer" style="min-height:<?PHP the_field('footer_height','option'); ?>px">	
             <div class="container">                
