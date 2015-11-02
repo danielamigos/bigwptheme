@@ -55,7 +55,7 @@ body {
 }
 img {
 	max-width:100%;
-	vertical-align:bottom;
+	/*vertical-align:bottom;*/
 }
 a {
 	color:#444;
@@ -265,12 +265,12 @@ ul.navbar-nav  > li > a > i{
 }
 
 /*------------------------------------*\
-    FRONT PAGE
+    FRONT PAGE TEMPLATE
 \*------------------------------------*/
 .call-to-action-menu-title{
     text-transform:uppercase;
     color:#ffffff;
-    background-color:#C6C6C6;
+    background-color:#808285;
     /*font-size:70px;*/
     font-family:'TradeGothicLTStd-Cn18';
     padding: 10px;
@@ -303,7 +303,6 @@ ul.navbar-nav  > li > a > i{
     text-transform:uppercase;
     font-size:10px;
 }
-
 .two-column-title{
     color: #ffffff;
     font-family:'TradeGothicLTStd-BdCn20';
@@ -312,7 +311,7 @@ ul.navbar-nav  > li > a > i{
 }
 
 .gray-title-background{
-    background-color: #C6C6C6; 
+    background-color: #808285; 
 }
 .gray-title-background.with-link{
     background-image: url('img/OrangeTriangle.png');
@@ -355,6 +354,110 @@ ul.navbar-nav  > li > a > i{
 .frontpage-footer img{
     margin-bottom:10px;
 }
+
+/*------------------------------------*\
+    ONE COLUMN TEMPLATE
+\*------------------------------------*/
+.one-column-title{
+    color: #ffffff;
+    font-family:'TradeGothicLTStd-BdCn20';
+    font-size: 29px;
+    padding: 8px 5px 8px 25px;
+	margin: 0;
+}
+.one-column-content-header{
+	font-size: 17px;
+	font-family: 'TradeGothicLTStd-Bd2';
+	color: #706F6F;
+	text-transform: uppercase;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.one-column-content-body{
+	font-size: 14px;
+	font-family: 'TradeGothicLTStd-Light';
+	color: #706F6F;
+	/*margin-top: 20px;
+	margin-bottom: 20px;*/
+}
+.one-column-content-body strong{
+	font-size: 14px;
+	font-family: 'TradeGothicLTStd-Bd2';
+	color: #F39200;
+	text-transform: uppercase;
+	/*margin-top: 20px;
+	margin-bottom: 20px;*/
+}
+
+.one-column-side-image-wrapper{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.one-column-side-image-wrapper .side_image_caption{
+	font-size: 46px;
+	line-height: 60px;
+	font-family: 'TradeGothicLTStd-Light';
+	color: #F39200;
+}	
+
+/*------------------------------------*\
+    TWO COLUMN TEMPLATE
+\*------------------------------------*/
+.two-column-title-bar-wrapper{
+	background-color:#808285;
+}
+.two-column-title-bar{
+	color: #ffffff;
+    font-family:'TradeGothicLTStd-BdCn20';
+    font-size: 29px;
+    padding: 8px 5px 8px 25px;
+	margin: 0;
+}
+.two-column-content-wrapper{
+	font-size: 14px;
+	font-family: 'TradeGothicLTStd-Light';
+	color: #706F6F;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.two-column-content-wrapper strong{
+	font-size: 14px;
+	font-family: 'TradeGothicLTStd-Bd2';
+	color: #F39200;
+	text-transform: uppercase;
+}	
+.two-column-side-image-wrapper{
+	/*margin-top: 20px;*/
+	margin-bottom: 20px;
+}
+.two-column-side-image-wrapper .side_image_caption{
+	font-size: 46px;
+	line-height: 60px;
+	font-family: 'TradeGothicLTStd-Light';
+	color: #F39200;
+}	
+.two-column-form-wrapper{
+	background-color:#808285;
+	padding: 20px;
+	margin-bottom: 20px;
+	font-size: 15px;
+	font-family:'TradeGothicLTStd-Bold';
+	text-transform: uppercase;
+	color: #1D1D1B;
+}
+.two-column-form-wrapper strong{
+	font-family:'TradeGothicLTStd-Bold';
+	font-size: 51px;
+	line-height: 64px;
+	color: #F39200;
+	text-transform: uppercase;
+}
+.full-width-contact-form-input{
+	width:100%;
+}
+.contact-form-7-submit-button {
+	text-transform: uppercase;
+}
 /*------------------------------------*\
     PAGE
 \*------------------------------------*/
@@ -394,7 +497,7 @@ ul.navbar-nav  > li > a > i{
 
 
 .give-us-a-call{
-    background-color:#DADADA;
+    background-color:#808285;
     text-align:center;
     padding: 20px 0;
     margin: 20px 0;
