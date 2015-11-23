@@ -102,6 +102,7 @@ input:focus {
 	transition: all 0.3s ease 0s;
     white-space:nowrap;
 }
+/*.navbar-inverse .navbar-nav>li.open>a,*/
 .navbar-inverse .navbar-nav>li>a:hover
 {
     background-position: center 45px; 
@@ -917,4 +918,50 @@ a img.aligncenter {
 	h3 {
 		page-break-after:avoid;
 	}
+}
+
+.dropdown-navbar
+{
+	position:fixed;
+	right: 0;
+    left: 0;
+	top: auto;
+	border:none;
+	margin: 0;
+	padding: 0;
+	background-color: #4f4c4c;
+}
+
+.dropdown-navbar ul
+{
+	padding-left: 0;	
+}
+.dropdown-navbar li
+{
+	list-style: none;
+	display: inline-block;
+}
+
+.dropdown-navbar li > a
+{
+	font-size: 22px;    
+	color: #ffffff;
+    background-image: url('img/OrangeTriangle-Up.png');
+    background-repeat: no-repeat;
+    background-position: center 55px;
+    transition: all 0.3s ease 0s;
+    white-space: nowrap;
+    padding: 15px 30px;
+	line-height: 20px;
+	display: block;
+	text-decoration: none;
+
+} 
+.dropdown-navbar li > a:hover
+{
+    background-position: center 45px; 	
+}
+.dropdown-navbar li.active > a 
+{
+    background-position: center 40px; 	
 }
