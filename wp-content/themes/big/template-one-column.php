@@ -17,6 +17,11 @@
             <?PHP if (function_exists(the_subtitle)): ?>
             <h2 class="page-subtitle"><?php the_subtitle(); ?></h2>
             <?PHP endif;?>
+            <?PHP if (get_field('use_top_call_to_action_link')): ?>
+            <div class="top-call-to-action">
+                <a href="<?PHP the_field('top_call_to_action_url'); ?>" target="<?PHP echo (get_sub_field('link_target') == 'Same Page')?'_self':'_blank'; ?>"><?PHP the_field('top_call_to_action_text'); ?></a>
+            </div>
+            <?PHP endif; ?>
 
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 

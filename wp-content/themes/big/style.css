@@ -438,7 +438,7 @@ ul.navbar-nav  > li > a > i{
 	color: #F39200;
 }	
 .two-column-form-wrapper{
-	background-color:#808285;
+	background-color:#d3d3d3;
 	padding: 20px;
 	margin-bottom: 20px;
 	font-size: 15px;
@@ -455,6 +455,7 @@ ul.navbar-nav  > li > a > i{
 }
 .full-width-contact-form-input{
 	width:100%;
+	padding: 8px;
 }
 .contact-form-7-submit-button {
 	text-transform: uppercase;
@@ -485,6 +486,28 @@ ul.navbar-nav  > li > a > i{
 }
 .top-page-header-logo{
     display:block;
+}
+
+.top-call-to-action{
+    display: block;
+    float: right;
+    background: #f68712;
+    margin-top: 40px;
+	padding: 5px 5px 5px 30px;
+	text-transform: uppercase;
+	max-width: 330px;
+	background-image: url('img/WhiteTriangle.png');
+	background-repeat: no-repeat;
+	background-position: center left;
+}
+
+.top-call-to-action a{
+	color: #ffffff;
+    font-size: 32px;
+    font-family: 'TradeGothicLTStd-BdCn20';
+	text-decoration: none;
+    line-height: 32px;
+
 }
 
 /*------------------------------------*\
@@ -965,3 +988,4 @@ a img.aligncenter {
 {
     background-position: center 40px; 	
 }
+
