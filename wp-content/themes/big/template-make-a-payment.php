@@ -1,4 +1,4 @@
-<?php /* Template Name: One Column Template */ get_header(); ?>
+<?php /* Template Name: Make A Payment Template */ get_header(); ?>
     <div class="row">
         <div class="col-sm-12" style="<?PHP if( !empty(get_field('top_header_image'))) echo 'background-image:url('.get_field('top_header_image')['url'].')'; else echo 'background-color:#808285;'; ?>">
             <div class="top-page-header">
@@ -34,36 +34,31 @@
                     </div>
                 </div>
                 <div class="row">
-                    <?PHP if( get_field('use_side_image') ) : $image = get_field('side_image'); ?>                    
-                        <div class="col-sm-12"> 
-                            <div class="col-sm-5 one-column-side-image-wrapper" style="float:<?PHP the_field('side_image_position');?>;" >
-                                <?php if( !empty($image) ): ?>
-                                <img src="<?PHP echo $image['url']; ?>"  alt="<?php echo $image['alt']; ?>"/>
-                                <?PHP endif; ?>
-                                <div class="side_image_caption">
-                                    <?PHP the_field('side_image_caption'); ?>
-                                </div>
-                            </div>
-                            <div class="one-column-content-header">
-                                <?PHP the_field('content_header'); ?>
-                            </div>
-                            <div class="one-column-content-body">
-                                <?php the_content(); ?>
-                            </div>
+                    <div class="col-sm-12"> 
+                        <div class="one-column-content-header">
+                            <?PHP the_field('content_header'); ?>
                         </div>
-                    <?PHP else: ?>                
-                        <div class="col-sm-12">
-                            <div class="one-column-content-header">
-                                <?PHP the_field('content_header'); ?>
-                            </div>
-                            <div class="one-column-content-body">
-                                <?php the_content(); ?>
-                            </div>
+                        <div class="one-column-content-body">
+                            <?php the_content(); ?>
                         </div>
-                    <?PHP endif; ?>
-                    
+                    </div>                                      
                 </div>
-
+                    <?PHP $count = 0; if( have_rows('logos') ): while ( have_rows('logos') ) : the_row(); $image = get_sub_field('image');  $count++; ?>
+                    <?PHP if($count == 1): //add row if it is the first ?>                    
+                <div class="row" style="text-align:center">
+                    <?PHP endif; ?>
+                    <div class="col-sm-4" style="text-align:center;">
+                        <a href="<?PHP the_sub_field('url'); ?>"><img src="<?PHP echo $image['url']  ?>" alt="" /></a>
+                    </div>
+                    <?PHP if($count == 3): //Close row if the row has 3 cells and restart the counter?>                    
+                </div>
+                    <?PHP  $count = 0; endif;  ?>
+                    <?PHP endwhile; endif;?>   
+                    
+                    <?PHP if($count != 0 ): //close div if the last row has less than 3 cells ?>                    
+                </div>
+                    <?PHP  $count = 0; endif; ?>                            
+                
                 <?PHP if (get_field('use_bottom_quote')): ?>
                 <div class="row">
                     <div class="col-sm-12">
@@ -71,7 +66,7 @@
                     </div>
                 </div>
                 <?PHP endif; ?>
-                
+
 				<?php comments_template( '', true ); // Remove if you don't want comments ?>
 
 				<br class="clear">

@@ -49,6 +49,9 @@
                                     </div>
                                 <?PHP elseif(get_row_layout() == 'form'): ?>
                                     <div class="two-column-form-wrapper">
+                                        <?php if(get_sub_field('title') != ""): ?>
+                                        <div class="form-title"><?PHP the_sub_field('title') ;?></div>
+                                        <?php endif; ?>
                                         <?PHP the_sub_field('content'); ?>
                                     </div>
                                 <?PHP endif; ?>
@@ -84,6 +87,14 @@
                         </div>
                     <?PHP endif; ?>
                 </div>
+                
+                <?PHP if (get_field('use_bottom_quote')): ?>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p class="bottom-quote"><?PHP the_field('bottom_quote');?></p>
+                    </div>
+                </div>
+                <?PHP endif; ?>
 
 				<?php comments_template( '', true ); // Remove if you don't want comments ?>
 

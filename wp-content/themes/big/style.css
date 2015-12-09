@@ -288,7 +288,7 @@ ul.navbar-nav  > li > a > i{
 }
 
 .call-to-action-menu-description{
-    color: #706F6F;
+    color: #383839;
     font-family:'DIN-Regular';
     font-size:12px;
     text-align:center;
@@ -343,7 +343,7 @@ ul.navbar-nav  > li > a > i{
     text-transform: uppercase;
     font-family:DIN-Light;
     font-size: 41px;
-    color:#706F6F;
+    color:#383839;
     vertical-align:middle;
     margin: 62px 0;
 }
@@ -354,6 +354,14 @@ ul.navbar-nav  > li > a > i{
 
 .frontpage-footer img{
     margin-bottom:10px;
+}
+
+.column-content-wrapper,
+.column-content-wrapper p
+{    
+	font-size: 14px;
+    font-family: 'TradeGothicLTStd-Light';
+    color: #383839;
 }
 
 /*------------------------------------*\
@@ -369,7 +377,7 @@ ul.navbar-nav  > li > a > i{
 .one-column-content-header{
 	font-size: 17px;
 	font-family: 'TradeGothicLTStd-Bd2';
-	color: #706F6F;
+	color: #383839;
 	text-transform: uppercase;
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -377,7 +385,7 @@ ul.navbar-nav  > li > a > i{
 .one-column-content-body{
 	font-size: 14px;
 	font-family: 'TradeGothicLTStd-Light';
-	color: #706F6F;
+	color: #383839;
 	/*margin-top: 20px;
 	margin-bottom: 20px;*/
 }
@@ -417,7 +425,7 @@ ul.navbar-nav  > li > a > i{
 .two-column-content-wrapper{
 	font-size: 14px;
 	font-family: 'TradeGothicLTStd-Light';
-	color: #706F6F;
+	color: #383839;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
@@ -460,6 +468,16 @@ ul.navbar-nav  > li > a > i{
 .contact-form-7-submit-button {
 	text-transform: uppercase;
 }
+.form-title
+{
+	font-family: 'DIN-Medium';
+    font-size: 46px;
+    line-height: 50px;
+    display: inline-block;
+    color: #F39200;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
 /*------------------------------------*\
     PAGE
 \*------------------------------------*/
@@ -476,7 +494,7 @@ ul.navbar-nav  > li > a > i{
     font-family: 'DIN-Light';
     font-size: 94px;
     display: inline-block;
-    color: #706F6F;
+    color: #383839;
     text-transform: uppercase;
 }
 .top-page-header{
@@ -508,6 +526,14 @@ ul.navbar-nav  > li > a > i{
 	text-decoration: none;
     line-height: 32px;
 
+}
+
+.bottom-quote
+{
+	font-size: 46px;
+    line-height: 60px;
+    font-family: 'TradeGothicLTStd-Light';
+    color: #F39200;
 }
 
 /*------------------------------------*\
@@ -759,8 +785,8 @@ ul.navbar-nav  > li > a > i{
 
     
 .call-to-action-menu{
-    min-height:270px; 
-    height:270px; 
+    min-height:300px; 
+    height:300px; 
     display: -webkit-flex; 
     -webkit-align-items: center; 
     -webkit-justify-content: center; 

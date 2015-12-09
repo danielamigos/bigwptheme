@@ -58,7 +58,9 @@
                                 <img src="<?PHP echo get_sub_field('image')['url'];?>" class="grayscale grayscale-fade" />
                             <?PHP endif;?>                    
                         <?PHP elseif(get_row_layout() == 'text'): ?>
+                            <div class="column-content-wrapper">
                             <?PHP the_sub_field('content');?>
+                            </div>
                         <?PHP endif; ?>                    
                     <?PHP endwhile;
                           endif; ?>
@@ -86,8 +88,10 @@
                             <?PHP else:?>
                                 <img src="<?PHP echo get_sub_field('image')['url'];?>" class="grayscale grayscale-fade" />
                             <?PHP endif;?>                    
-                        <?PHP elseif(get_row_layout() == 'text'): ?>
+                        <?PHP elseif(get_row_layout() == 'text'): ?>                        
+                            <div class="column-content-wrapper">
                             <?PHP the_sub_field('content');?>
+                            </div>
                         <?PHP endif; ?>                    
                     <?PHP endwhile;
                           endif; ?>
@@ -98,7 +102,14 @@
         endif;
 
         endwhile;
-
+        
+            if (get_field('use_bottom_quote')): ?>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p class="bottom-quote"><?PHP the_field('bottom_quote');?></p>
+                    </div>
+                </div>
+            <?PHP endif;
     else : ?>
 
         <div>No content</div>
