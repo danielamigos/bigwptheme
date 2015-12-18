@@ -130,6 +130,6 @@
 
 <?php get_sidebar(); ?>
 
-<div class="frontpage-footer"><span class="big-text">Big</span> on details <img src="<?php echo get_template_directory_uri(); ?>/img/small-elephant.png" /> <span class="big-text">Big</span> on Service</div>
+<div class="frontpage-footer"><span class="big-text">Big</span> on details <br class="hidden-sm hidden-md hidden-lg" /><img src="<?php echo get_template_directory_uri(); ?>/img/small-elephant.png" /><br class="hidden-sm hidden-md hidden-lg"/> <span class="big-text">Big</span> on Service</div>
 
 <?php get_footer(); ?>

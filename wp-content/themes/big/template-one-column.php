@@ -36,7 +36,7 @@
                 <div class="row">
                     <?PHP if( get_field('use_side_image') ) : $image = get_field('side_image'); ?>                    
                         <div class="col-sm-12"> 
-                            <div class="col-sm-5 one-column-side-image-wrapper" style="float:<?PHP the_field('side_image_position');?>;" >
+                            <div class="hidden-xs  col-sm-5 one-column-side-image-wrapper" style="float:<?PHP the_field('side_image_position');?>;" >
                                 <?php if( !empty($image) ): ?>
                                 <img src="<?PHP echo $image['url']; ?>"  alt="<?php echo $image['alt']; ?>"/>
                                 <?PHP endif; ?>
@@ -49,6 +49,14 @@
                             </div>
                             <div class="one-column-content-body">
                                 <?php the_content(); ?>
+                            </div>
+                            <div class="hidden-sm hidden-md hidden-lg col-sm-5 one-column-side-image-wrapper" style="float:<?PHP the_field('side_image_position');?>;" >
+                                <?php if( !empty($image) ): ?>
+                                <img src="<?PHP echo $image['url']; ?>"  alt="<?php echo $image['alt']; ?>"/>
+                                <?PHP endif; ?>
+                                <div class="side_image_caption">
+                                    <?PHP the_field('side_image_caption'); ?>
+                                </div>
                             </div>
                         </div>
                     <?PHP else: ?>                
