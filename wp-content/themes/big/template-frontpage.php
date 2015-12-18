@@ -24,8 +24,20 @@
                       $numberOfMenuItem = count($menu_items);
                       foreach($menu_items as $index => $value):?>
                 <div class="col-sm-2 call-to-action-menu-item" style="vertical-align:middle;">
-                    <div><img class="center-block" src="<?PHP echo $value['image']['url'];?>" /></div>
-                    <div class="call-to-action-menu-text"><?PHP echo $value['text'];?></div>
+                    <div>
+                        <?PHP if($value['use_link']): $link_target = ($value['link_target']=='New Page/Tab')?'_blank':'_self';?>
+                        <a href="<?PHP echo $value['link']; ?>" target="<?PHP echo $link_target; ?>"><img class="center-block" src="<?PHP echo $value['image']['url'];?>" /></a>
+                        <?PHP else: ?>
+                        <img class="center-block" src="<?PHP echo $value['image']['url'];?>" />
+                        <?PHP endif; ?>
+                    </div>
+                    <div class="call-to-action-menu-text">
+                        <?PHP if($value['use_link']): $link_target = ($value['link_target']=='New Page/Tab')?'_blank':'_self';?>
+                        <a href="<?PHP echo $value['link']; ?>" target="<?PHP echo $link_target; ?>"><?PHP echo $value['text'];?></a>
+                        <?PHP else: ?>
+                        <?PHP echo $value['text'];?>
+                        <?PHP endif; ?>
+                    </div>
                     <div class="call-to-action-hidden-desription" style="display:none;">
                         <div class="call-to-action-menu-description"><?PHP echo $value['description']; ?></div>
                         <?PHP if($value['use_link']): $link_target = ($value['link_target']=='New Page/Tab')?'_blank':'_self';?>
