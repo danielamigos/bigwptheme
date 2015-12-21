@@ -14,7 +14,7 @@
         <?php  elseif(get_row_layout() == 'call_to_action_menu'): ?>
             <div class="row">
                 <div class="col-sm-12">
-                    <h1 class="call-to-action-menu-title" style="font-size:<?PHP the_sub_field('title_font_size'); ?>px">
+                    <h1 class="call-to-action-menu-title">
                         <?PHP the_sub_field('title');?>
                     </h1>
                 </div>
